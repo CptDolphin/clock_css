@@ -5,6 +5,12 @@
 
 body {
     background: linear-gradient(to right, blue, white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    font-size: 1.5rem;
 }
 
 .clock {
@@ -65,19 +71,19 @@ body {
     transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
 }
 
-.clock .hand.second {
+.hand:nth-child(1n) {
     width: 4px;
     height: 45%;
     background-color: red;
 }
 
-.clock .hand.minute {
+.hand:nth-child(2n) {
     width: 7px;
     height: 40%;
     background-color: black;
 }
 
-.clock .hand.hour {
+.hand:nth-child(3n) {
     width: 10px;
     height: 35%;
     background-color: black;
